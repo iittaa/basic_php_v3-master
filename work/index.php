@@ -1,6 +1,18 @@
 <?php
 
-$message = "こんにちは！"
+$n = mt_rand(1, 3);
+
+if($n === 1){
+  $message = "1です";
+}else if($n === 2){
+  $message = "2です";
+}else{
+  $message = "3です";
+}
+
+function h($str){
+  return htmlspecialchars($str, ENT_QUOTES, "UTF-8");
+}
 
 ?>
 
@@ -21,7 +33,7 @@ $message = "こんにちは！"
       </div>
       <div class="info">
         <h1>山田太郎</h1>
-        <p><?= $message; ?></p>
+        <p><?= h($message); ?></p>
         <ul>
           <li>
             <a href="https://dotinstall.com" target="_blank">
@@ -44,18 +56,21 @@ $message = "こんにちは！"
       <img src="img/work1.png" width="400" height="260" alt="勇者ゲームの紹介画像">
       <h1>勇者ゲーム</h1>
       <p>楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。</p>
+      <a href="hero.php">もっと見る</a>
     </section>
   
     <section>
       <img src="img/work2.png" width="400" height="260" alt="宝探しゲームの紹介画像">
       <h1>宝探しゲーム</h1>
       <p>楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。</p>
+      <a href="tresure.php">もっと見る</a>
     </section>
   
     <section>
       <img src="img/work3.png" width="400" height="260" alt="神経衰弱の紹介画像">
       <h1>神経衰弱</h1>
       <p>楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。楽しいアプリです。</p>
+      <a href="memory.php">もっと見る</a>
     </section>
 
   </section>
